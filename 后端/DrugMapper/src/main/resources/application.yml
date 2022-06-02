@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://124.222.131.59:3306/drugmaper?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/drugmaper?serverTimezone=UTC
+    #username: root
+    password: drugmaper
+    username: drugmaper
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/yiyuan
+  #      uri: mongodb://124.222.131.59:27017/yiyuan
+  redis:
+    #password: 12345678
+    port: 6379
+    host: 124.222.131.59
+    database: 0
+    #host: localhost
+    cache:
+      type: redis
+  cache:
+    redis:
+      time-to-live: 10
+server:
+  port: 8090
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
